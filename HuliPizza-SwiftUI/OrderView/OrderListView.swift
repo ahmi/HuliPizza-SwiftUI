@@ -12,11 +12,7 @@ struct OrderListView: View {
         VStack {
             Text("Your order")
             List(0 ..< 5) { item in
-                HStack(alignment:.firstTextBaseline) {
-                    Text("Your order item here")
-                    Spacer()
-                    Text ("$0.0")
-                }
+                OrderRowView()
             }
         }
     }
