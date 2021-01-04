@@ -18,12 +18,13 @@ struct ContentView: View {
             Text("Order Pizza")
                 .font(.largeTitle)
             Spacer()
-            HStack {
+            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 15 ) {
                 Image("1_100w")
                 Text("Huli Chicken Pizza")
+                Spacer() // adding at the end to push image and text towards left side
             }
             Text("Your order")
-            HStack {
+            HStack(alignment:.firstTextBaseline) {
                 Text("Your order item here")
                 Spacer()
                 Text ("$0.0")
