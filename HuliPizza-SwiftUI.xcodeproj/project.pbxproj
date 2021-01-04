@@ -19,6 +19,7 @@
 		84D22D7C25A2A13A0029930D /* MenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D22D7B25A2A13A0029930D /* MenuRowView.swift */; };
 		84D22D7F25A2A1810029930D /* RatingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D22D7E25A2A1810029930D /* RatingRowView.swift */; };
 		84D22D8225A2A2190029930D /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D22D8125A2A2190029930D /* OrderRowView.swift */; };
+		84D22D8525A2A3640029930D /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D22D8425A2A3640029930D /* PageTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		84D22D7B25A2A13A0029930D /* MenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowView.swift; sourceTree = "<group>"; };
 		84D22D7E25A2A1810029930D /* RatingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRowView.swift; sourceTree = "<group>"; };
 		84D22D8125A2A2190029930D /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
+		84D22D8425A2A3640029930D /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		84D22D4A25A28A560029930D /* HuliPizza-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				84D22D4F25A28A570029930D /* ContentView.swift */,
 				84D22D7625A29D840029930D /* Common */,
 				84D22D6E25A29C6C0029930D /* Model */,
 				84D22D6D25A29C610029930D /* HistoryView */,
@@ -75,7 +78,6 @@
 				84D22D6B25A29C4D0029930D /* OrderView */,
 				84D22D4B25A28A570029930D /* AppDelegate.swift */,
 				84D22D4D25A28A570029930D /* SceneDelegate.swift */,
-				84D22D4F25A28A570029930D /* ContentView.swift */,
 				84D22D5125A28A5A0029930D /* Assets.xcassets */,
 				84D22D5625A28A5A0029930D /* LaunchScreen.storyboard */,
 				84D22D5925A28A5A0029930D /* Info.plist */,
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				84D22D7725A29D960029930D /* ContentHeaderView.swift */,
+				84D22D8425A2A3640029930D /* PageTitleView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				84D22D8225A2A2190029930D /* OrderRowView.swift in Sources */,
 				84D22D4C25A28A570029930D /* AppDelegate.swift in Sources */,
+				84D22D8525A2A3640029930D /* PageTitleView.swift in Sources */,
 				84D22D7425A29D060029930D /* MenuListView.swift in Sources */,
 				84D22D7025A29C8F0029930D /* OrderListView.swift in Sources */,
 				84D22D7825A29D960029930D /* ContentHeaderView.swift in Sources */,
