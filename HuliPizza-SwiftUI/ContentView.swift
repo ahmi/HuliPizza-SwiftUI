@@ -11,9 +11,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ContentHeaderView()
-            PageTitleView(title: "Order Pizza")
-            MenuListView()
-            OrderListView()
+           // PageTitleView(title: "Order Pizza")
+            PageTitleView(title: "Pizza History")
+           // MenuListView()
+           // OrderListView()
+            HistoryListView()
             Spacer()
         }
             .padding()
@@ -31,3 +33,4 @@ struct ContentView_Previews: PreviewProvider {
         }
     }
 }
+
