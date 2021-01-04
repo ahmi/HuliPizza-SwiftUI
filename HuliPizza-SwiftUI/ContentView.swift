@@ -18,8 +18,18 @@ struct ContentView: View {
             Text("Order Pizza")
                 .font(.largeTitle)
             Spacer()
+            HStack {
+                Image("1_100w")
+                Text("Huli Chicken Pizza")
+            }
+            Text("Your order")
+            HStack {
+                Text("Your order item here")
+                Spacer()
+                Text ("$0.0")
+            }
         }
-        .padding()
+            .padding()
     }
 }
 
