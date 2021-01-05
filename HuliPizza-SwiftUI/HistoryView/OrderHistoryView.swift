@@ -10,6 +10,10 @@ import SwiftUI
 struct HistoryListView: View {
     var body: some View {
         VStack {
+            ContentHeaderView()
+                .layoutPriority(2)
+            SelectedImageView(imageName:"1_250w")
+            PageTitleView(title: "Order History")
             List(0..<5) { item in
                 OrderHistoryRowView()
             }
@@ -20,5 +24,8 @@ struct HistoryListView: View {
 struct OrderHistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryListView()
+        HistoryListView()
+            .colorScheme(.dark)
+            .background(Color.black)
     }
 }

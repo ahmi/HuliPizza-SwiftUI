@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		841452D725A4654E00986359 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841452D625A4654E00986359 /* ListHeaderView.swift */; };
+		841452DA25A4884000986359 /* SelectedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841452D925A4884000986359 /* SelectedImageView.swift */; };
 		84D22D4C25A28A570029930D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D22D4B25A28A570029930D /* AppDelegate.swift */; };
 		84D22D4E25A28A570029930D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D22D4D25A28A570029930D /* SceneDelegate.swift */; };
 		84D22D5025A28A570029930D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D22D4F25A28A570029930D /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		841452D625A4654E00986359 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
+		841452D925A4884000986359 /* SelectedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedImageView.swift; sourceTree = "<group>"; };
 		84D22D4825A28A560029930D /* HuliPizza-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HuliPizza-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D22D4B25A28A570029930D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D22D4D25A28A570029930D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				84D22D8825A2A6910029930D /* OrderHistoryView.swift */,
 				84D22D8B25A2A70A0029930D /* OrderHistoryRowView.swift */,
+				841452D925A4884000986359 /* SelectedImageView.swift */,
 			);
 			path = HistoryView;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				84D22D7025A29C8F0029930D /* OrderListView.swift in Sources */,
 				84D22D7825A29D960029930D /* ContentHeaderView.swift in Sources */,
 				84D22D4E25A28A570029930D /* SceneDelegate.swift in Sources */,
+				841452DA25A4884000986359 /* SelectedImageView.swift in Sources */,
 				84D22D7C25A2A13A0029930D /* MenuRowView.swift in Sources */,
 				841452D725A4654E00986359 /* ListHeaderView.swift in Sources */,
 				84D22D7F25A2A1810029930D /* RatingRowView.swift in Sources */,
