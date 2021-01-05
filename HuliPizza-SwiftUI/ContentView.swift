@@ -21,8 +21,7 @@ struct ContentView: View {
                 .layoutPriority(1)
             OrderListView()
                 .layoutPriority(1)
-           // HistoryListView()
-            Spacer()
+           // Spacer()
         }
             .padding()
     }
