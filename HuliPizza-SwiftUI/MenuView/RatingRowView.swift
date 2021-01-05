@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct RatingRowView: View {
+    var count: Int = 4
+    var rating: [String] {
+        let aSymbolName = "\(count).circle"
+        return Array(repeating: aSymbolName, count: count)
+    }
     var body: some View {
         HStack {
-            ForEach(0 ..< 4) {item in
-                Image(systemName: "star.circle")
+            ForEach(rating, id:\.self) {item in
+                Image(systemName: item)
                     .font(.headline)
                     .foregroundColor(Color("G4"))
                 //Download SF Symbols from from developer.apple.design
@@ -19,6 +24,7 @@ struct RatingRowView: View {
                 //instead of our image we will use image from SF Symbols
                 // Select symbol>Edit>Copy name and paste here with `systemName:`
                 //They act as text and can be changed with text modifiers like font
+                // to remove identiable protocol error we have to provide  **id:\.self**
             }
         }
     }
