@@ -14,8 +14,10 @@ struct ListHeaderView: View {
             Text(title)
                 .padding(.leading,5)
             //can add multiple modifiers as [.leading, trailing, .top, .bottom]
+                .foregroundColor(Color("G2"))
             Spacer()
         }
+        .background(Color("G4"))
     }
 }
 

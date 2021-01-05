@@ -13,10 +13,14 @@ struct MenuRowView: View {
             Image("1_100w")
             VStack {
                 Text("Huli Chicken Pizza")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.light)
                 RatingRowView()
             }
             
-            Spacer() // adding at the end to push image and text towards left side
+            //Spacer()
+            // adding at the end to push image and text towards left side
+            //removed spacer since we modified the font and it needed adjustment
         }
     }
 }
@@ -25,5 +29,6 @@ struct MenuRowView: View {
 struct MenuRowView_Previews: PreviewProvider {
     static var previews: some View {
         MenuRowView()
+          //  .environment(\.sizeCategory, .accessibilityExtraExtraLarge)
     }
 }

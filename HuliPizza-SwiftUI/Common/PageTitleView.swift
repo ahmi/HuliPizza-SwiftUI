@@ -12,6 +12,8 @@ struct PageTitleView: View {
     var body: some View {
         Text(title)
             .font(.largeTitle)
+            .fontWeight(.light)
+        //open +, type font in modifiers to see all modifiers related to font, drag and drop directly to text or type it out
     }
 }
 
