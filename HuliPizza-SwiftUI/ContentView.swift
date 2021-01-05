@@ -11,10 +11,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ContentHeaderView()
-           // PageTitleView(title: "Order Pizza")
-            PageTitleView(title: "Pizza History")
-           // MenuListView()
-           // OrderListView()
+            PageTitleView(title: "Order Pizza")
+          //  PageTitleView(title: "Pizza History")
+            //* challange 1 *//
+            MenuListView()
+            OrderListView()
             HistoryListView()
             Spacer()
         }
