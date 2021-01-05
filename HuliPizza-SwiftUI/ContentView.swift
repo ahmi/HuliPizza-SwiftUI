@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isMenuDisplayed: Bool = true
     var body: some View {
         VStack {
             ContentHeaderView()
                 .layoutPriority(2)
-            //higher the priority, more of scalable capability to adjust inside the stack
-
-            PageTitleView(title: "Order Pizza")
-          //  PageTitleView(title: "Pizza History")
-            //* challange 1 *//
+            Button(action: {self.isMenuDisplayed.toggle()}) {
+                PageTitleView(title: "Order Pizza", isDisplayingOrders: isMenuDisplayed)
+            }
+            Spacer()
             MenuListView()
-                .layoutPriority(1)
+                .layoutPriority(self.isMenuDisplayed ? 1.0: 0.5)
             OrderListView()
-                .layoutPriority(1)
+                .layoutPriority(self.isMenuDisplayed ? 0.5: 1.0)
            // Spacer()
         }
             .padding()
