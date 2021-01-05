@@ -10,7 +10,7 @@ import SwiftUI
 struct OrderListView: View {
     var body: some View {
         VStack {
-            Text("Your order")
+            ListHeaderView(title: "Your order")
             List(0 ..< 5) { item in
                 OrderRowView()
             }
