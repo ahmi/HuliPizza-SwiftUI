@@ -11,12 +11,17 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ContentHeaderView()
+                .layoutPriority(2)
+            //higher the priority, more of scalable capability to adjust inside the stack
+
             PageTitleView(title: "Order Pizza")
           //  PageTitleView(title: "Pizza History")
             //* challange 1 *//
             MenuListView()
+                .layoutPriority(1)
             OrderListView()
-            HistoryListView()
+                .layoutPriority(1)
+           // HistoryListView()
             Spacer()
         }
             .padding()
