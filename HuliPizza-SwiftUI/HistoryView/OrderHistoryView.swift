@@ -7,25 +7,24 @@
 
 import SwiftUI
 
-struct HistoryListView: View {
+struct OrderHistoryView: View {
+    @State var imgaeID: Int = 0
     var body: some View {
         VStack {
-            ContentHeaderView()
-                .layoutPriority(2)
-            SelectedImageView(imageName:"1_250w")
+          //  ContentHeaderView()
+          //      .layoutPriority(2)
+            SelectedImageView(imageName:"\($imgaeID)_250w")
                 .padding(5)
-            PageTitleView(title: "Order History", isDisplayingOrders: false)
-            List(0..<5) { item in
-                OrderHistoryRowView()
-            }
+            PageTitleView(title: "Pizza History", isDisplayingOrders: false)
+           HistoryListView(imageID: $imgaeID)
         }
     }
 }
 
 struct OrderHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryListView()
-        HistoryListView()
+        OrderHistoryView()
+        OrderHistoryView()
             .colorScheme(.dark)
             .background(Color.black)
     }

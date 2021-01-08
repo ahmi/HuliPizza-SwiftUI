@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct OrderHistoryRowView: View {
+    var historyItem: HistoryItem
     var body: some View {
             HStack(alignment: .top, spacing: 10) {
-                Image ("1_100w")
+                Image ("\(historyItem.id)_100w")
                     .clipShape(Circle())
                     .shadow(color: .black, radius: 10, x: 5, y: 5)
-                Text("your pizza history")
+                Text(historyItem.name)
                     .font(.title)
                 Spacer()
             }.overlay(
@@ -27,6 +28,6 @@ struct OrderHistoryRowView: View {
 
 struct HistoryRowView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderHistoryRowView()
+        OrderHistoryRowView(historyItem: HistoryModel().historyItems[0])
     }
 }

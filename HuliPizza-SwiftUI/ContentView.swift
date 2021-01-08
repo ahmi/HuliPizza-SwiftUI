@@ -12,8 +12,8 @@ struct ContentView: View {
     @ObservedObject var orderModel: OrderModel
     var body: some View {
         VStack {
-//            ContentHeaderView()
-//                .layoutPriority(2)
+            ContentHeaderView()
+                .layoutPriority(2)
             Button(action: {self.isMenuDisplayed.toggle()}) {
                 PageTitleView(title: "Order Pizza", isDisplayingOrders: isMenuDisplayed)
             }
@@ -32,7 +32,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
             ContentView(orderModel: OrderModel())
+                .environmentObject(UserPreferences())
+
             ContentView(orderModel: OrderModel())
+                .environmentObject(UserPreferences())
+
                 .colorScheme(.dark)
                 .background(Color.black)
                 .previewDevice("iPad Pro (9.7-inch)")
