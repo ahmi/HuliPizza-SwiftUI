@@ -18,9 +18,9 @@ struct ContentView: View {
                 PageTitleView(title: "Order Pizza", isDisplayingOrders: isMenuDisplayed)
             }
             Spacer()
-            MenuListView()
+            MenuListView(orderModel: $orderModel)
                 .layoutPriority(self.isMenuDisplayed ? 1.0: 0.5)
-            OrderListView()
+            OrderListView(orderModel: orderModel)
                 .layoutPriority(self.isMenuDisplayed ? 0.5: 1.0)
            // Spacer()
         }

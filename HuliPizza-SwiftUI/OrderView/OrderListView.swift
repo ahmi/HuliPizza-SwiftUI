@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct OrderListView: View {
+    var orderModel: OrderModel // no need of binding because here orderModel object will be only read only we are not using it to write
     var body: some View {
         VStack {
             ListHeaderView(title: "Your order")
-            List(0 ..< 5) { item in
-                OrderRowView()
+            List(orderModel.orders) { order in
+                OrderRowView(orderItem: order)
             }
         }
     }
@@ -20,6 +21,6 @@ struct OrderListView: View {
 
 struct OrderListView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderListView()
+        OrderListView(orderModel: testOrderModel)
     }
 }
