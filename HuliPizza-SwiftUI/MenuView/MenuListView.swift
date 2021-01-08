@@ -12,9 +12,13 @@ struct MenuListView: View {
     var body: some View {
         VStack {
             ListHeaderView(title:"Menu")
-            List(menuListItems) { item in
-                MenuRowView(menuItem: item)
-            }.listRowInsets(EdgeInsets())
+            NavigationView {
+                List(menuListItems) { item in
+                    NavigationLink(destination: MenuDetailView(menuItem: item)) {
+                            MenuRowView(menuItem: item)
+                    }.listRowInsets(EdgeInsets())
+                }.navigationBarTitle("Pizza Order")
+            }
         }
     }
 }

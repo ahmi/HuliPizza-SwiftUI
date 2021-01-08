@@ -13,7 +13,7 @@ struct SelectedImageView: View {
             Image(imageName)
                 .resizable()
                 .scaledToFit()
-                .cornerRadius(30)
+                .cornerRadius(20)
                 .shadow(color: Color.black.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: 5, y: 5)
         }
 }
