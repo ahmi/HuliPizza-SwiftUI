@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isMenuDisplayed: Bool = true
+    @State var orderModel: OrderModel
     var body: some View {
         VStack {
-            ContentHeaderView()
-                .layoutPriority(2)
+//            ContentHeaderView()
+//                .layoutPriority(2)
             Button(action: {self.isMenuDisplayed.toggle()}) {
                 PageTitleView(title: "Order Pizza", isDisplayingOrders: isMenuDisplayed)
             }
@@ -30,8 +31,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            ContentView()
-            ContentView()
+            ContentView(orderModel: OrderModel())
+            ContentView(orderModel: OrderModel())
                 .colorScheme(.dark)
                 .background(Color.black)
                 .previewDevice("iPad Pro (9.7-inch)")

@@ -15,7 +15,7 @@ struct ContentHeaderView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(minWidth: 300, idealWidth: 500, maxWidth: 500, minHeight: 75, idealHeight: 143, maxHeight: 150, alignment: .center)
-                Text("Huli Pizza Company")
+                Text("Mehru Pizza Company")
                     .offset(x: -10.0, y: 20.0)
                     .font(Font.custom("Avinir-Black", size: 20))
                     .foregroundColor(.white)
