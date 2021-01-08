@@ -13,14 +13,14 @@ struct MenuListView: View {
         VStack {
             ListHeaderView(title:"Menu")
             List(menuListItems) { item in
-                MenuRowView()
-            }
+                MenuRowView(menuItem: item)
+            }.listRowInsets(EdgeInsets())
         }
     }
 }
 
 struct MenuListView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuListView()
+        MenuListView(menuListItems: MenuModel().menu)
     }
 }
