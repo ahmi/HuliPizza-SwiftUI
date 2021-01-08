@@ -9,7 +9,7 @@
 import SwiftUI
 ///A `View`for entering in an order. Takes basic information about the order from `menuItem`
 struct MenuDetailView: View {
-    @Binding var orderModel: OrderModel
+    @ObservedObject var orderModel: OrderModel
     var menuItem:MenuItem
     var formattedPrice:String{
         String(format:"%3.2f",menuItem.price)
@@ -76,7 +76,8 @@ struct MenuDetailView: View {
 
 struct MenuDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuDetailView(orderModel:.constant(OrderModel()), menuItem: testMenuItem)
+        MenuDetailView(orderModel:OrderModel(), menuItem: testMenuItem)
         //@Binding variable has no initial value since it is a pointer to some object which is going to be changed but in preview we have to provide constant value, hence we change into constant intialised value
+        //Use State and Binding variable with View related object and ObjservedObject for Model objects
     }
 }

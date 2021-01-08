@@ -11,7 +11,7 @@ struct OrderListView: View {
     var orderModel: OrderModel // no need of binding because here orderModel object will be only read only we are not using it to write
     var body: some View {
         VStack {
-            ListHeaderView(title: "Your order")
+            ListHeaderView( orderModel: orderModel, title: "Your order")
             List(orderModel.orders) { order in
                 OrderRowView(orderItem: order)
             }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isMenuDisplayed: Bool = true
-    @State var orderModel: OrderModel
+    @ObservedObject var orderModel: OrderModel
     var body: some View {
         VStack {
 //            ContentHeaderView()
@@ -18,7 +18,7 @@ struct ContentView: View {
                 PageTitleView(title: "Order Pizza", isDisplayingOrders: isMenuDisplayed)
             }
             Spacer()
-            MenuListView(orderModel: $orderModel)
+            MenuListView(orderModel: orderModel)
                 .layoutPriority(self.isMenuDisplayed ? 1.0: 0.5)
             OrderListView(orderModel: orderModel)
                 .layoutPriority(self.isMenuDisplayed ? 0.5: 1.0)

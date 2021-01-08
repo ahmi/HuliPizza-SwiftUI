@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ListHeaderView: View {
+    @ObservedObject var orderModel: OrderModel
     var title: String
     var body: some View {
         HStack {
@@ -16,7 +17,12 @@ struct ListHeaderView: View {
             //can add multiple modifiers as [.leading, trailing, .top, .bottom]
                 .foregroundColor(Color("G2"))
             Spacer()
+            Text(orderModel.formattedTotal)
+                .fontWeight(.heavy)
+                .padding(.trailing)
         }
+        .foregroundColor(Color("IP"))
+        .font(.headline)
         .background(Color("G4"))
     }
 }
@@ -24,6 +30,6 @@ struct ListHeaderView: View {
 
 struct ListHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ListHeaderView(title: "Menu")
+        ListHeaderView(orderModel: OrderModel(), title: "Menu")
     }
 }
