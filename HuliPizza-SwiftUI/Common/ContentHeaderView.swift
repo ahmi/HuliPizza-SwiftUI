@@ -19,7 +19,6 @@ struct ContentHeaderView: View {
                     .offset(x: -10.0, y: 20.0)
                     .font(Font.custom("Avinir-Black", size: 20))
                     .foregroundColor(.white)
-                
             }
         }
     }

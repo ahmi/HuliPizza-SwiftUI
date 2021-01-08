@@ -12,6 +12,7 @@ struct RatingRowView: View {
     var rating: [String] {
         let aSymbolName = "\(count).circle"
         return Array(repeating: aSymbolName, count: count)
+        //Create an array of length count with same element aSymbolName
     }
     var body: some View {
         HStack {

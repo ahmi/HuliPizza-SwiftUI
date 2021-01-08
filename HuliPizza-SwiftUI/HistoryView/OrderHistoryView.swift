@@ -13,6 +13,7 @@ struct HistoryListView: View {
             ContentHeaderView()
                 .layoutPriority(2)
             SelectedImageView(imageName:"1_250w")
+                .padding(5)
             PageTitleView(title: "Order History", isDisplayingOrders: false)
             List(0..<5) { item in
                 OrderHistoryRowView()
