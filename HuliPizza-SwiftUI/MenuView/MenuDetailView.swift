@@ -17,7 +17,7 @@ struct MenuDetailView: View {
         String(format:"%3.2f",menuItem.price)
     }
     func addItem(){
-        orderModel.add(menuID: menuItem.id)
+     //   orderModel.add(menuID: menuItem.id)
         didOrder = true
     }
     
@@ -65,8 +65,12 @@ struct MenuDetailView: View {
                     .background(Color("G4"))
                         .foregroundColor(Color("IP"))
                         .cornerRadius(5)
-                }.alert(isPresented:$didOrder){
-                    Alert(title: Text("Pizza Ordered"), message: Text("You have ordered:" + self.menuItem.name))
+                }
+//                .alert(isPresented:$didOrder){
+//                    Alert(title: Text("Pizza Ordered"), message: Text("You have ordered:" + self.menuItem.name))
+//                }
+                .sheet(isPresented: $didOrder) {
+                    ConfirmView(menuID: menuItem.id, isPresented: self.$didOrder, orderModel: self.orderModel)
                 }
                 Spacer()
             }
@@ -80,6 +84,7 @@ struct MenuDetailView: View {
 struct MenuDetailView_Previews: PreviewProvider {
     static var previews: some View {
         MenuDetailView(orderModel:OrderModel(), menuItem: testMenuItem)
+            .environmentObject(UserPreferences())
         //@Binding variable has no initial value since it is a pointer to some object which is going to be changed but in preview we have to provide constant value, hence we change into constant intialised value
         //Use State and Binding variable with View related object and ObjservedObject for Model objects
     }
