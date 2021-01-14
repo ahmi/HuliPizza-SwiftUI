@@ -10,14 +10,18 @@ import SwiftUI
 struct OrderRowView: View {
     var orderItem: OrderItem
     var body: some View {
-        HStack(alignment:.firstTextBaseline) {
-            Text(orderItem.name)
-                .font(.headline)
-            Spacer()
-            Text (orderItem.formattedExtendedPrice)
-                .bold()
-            //fontweight modifiers can be given directly like .bold or .light
-            // can also be given with font
+        VStack {
+            HStack(alignment:.firstTextBaseline) {
+                Image(systemName: "\(orderItem.id).square")
+                Text(orderItem.name)
+                    .font(.headline)
+                Spacer()
+                Text (orderItem.formattedExtendedPrice)
+                    .bold()
+                //fontweight modifiers can be given directly like .bold or .light
+                // can also be given with font
+            }
+            Text(orderItem.comments)
         }
     }
 }
