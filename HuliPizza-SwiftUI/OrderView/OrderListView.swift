@@ -11,11 +11,22 @@ struct OrderListView: View {
     var orderModel: OrderModel // no need of binding because here orderModel object will be only read only we are not using it to write
     var body: some View {
         VStack {
-            ListHeaderView( orderModel: orderModel, title: "Your order")
-            List(orderModel.orders) { order in
-                OrderRowView(orderItem: order)
+            List {
+                Section(header:
+                            ListHeaderView( orderModel: self.orderModel, title: "Your order")
+                ){
+                    ForEach(orderModel.orders) { order in
+                        OrderRowView(orderItem: order)
+                    }
+                    .onDelete(perform: delete)
+                }
             }
         }
+    }
+    
+    func delete(at offset:IndexSet) {
+        orderModel.orders.remove(atOffsets: offset)
+        
     }
 }
 
