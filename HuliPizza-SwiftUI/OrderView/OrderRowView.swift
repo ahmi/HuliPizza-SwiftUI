@@ -22,7 +22,7 @@ struct OrderRowView: View {
                 // can also be given with font
             }
             Text(orderItem.comments)
-        }
+        }.animation(.none)
     }
 }
 
