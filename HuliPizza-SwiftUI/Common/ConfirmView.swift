@@ -41,15 +41,29 @@ struct ConfirmView: View {
             Text("Confirm your order of \(quantity) \(size.formatted()) \(name) pizza")
                 .font(.headline)
             Spacer()
+            SizePickerView(size: $size)
+            QuantityStepper(quantity: $quantity)
             TextField("Add a comment to your order", text: $comment)
                 .background(Color("G4"))
-            Button(action: addItem){
-                Text("Add")
-                    .font(.title)
-                .padding()
-                .background(Color("G4"))
-                .cornerRadius(10)
-            }.padding([.bottom])
+            HStack{
+                Button(action: addItem){
+                    Text("Add")
+                        .font(.title)
+                        .padding()
+                        .background(Color("G4"))
+                        .cornerRadius(10)
+                }.padding([.bottom])
+                
+                Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+                
+                Button(action: addItem){
+                    Text("Cancel")
+                        .font(.title)
+                        .padding()
+                        .background(Color("G4"))
+                        .cornerRadius(10)
+                }.padding([.bottom])
+            }
         }
         .background(Color("G3"))
         .foregroundColor(Color("IP"))
