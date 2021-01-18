@@ -22,9 +22,10 @@ struct ContentView: View {
                 .layoutPriority(self.isMenuDisplayed ? 1.0: 0.5)
             OrderListView(orderModel: orderModel)
                 .layoutPriority(self.isMenuDisplayed ? 0.5: 1.0)
+                .padding()
+                .animation(.spring())
            // Spacer()
         }
-            .padding()
     }
 }
 
